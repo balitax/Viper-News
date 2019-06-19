@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8KP-eA-sqz">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News View Controller-->
+        <scene sceneID="Wvc-05-vbH">
+            <objects>
+                <viewController storyboardIdentifier="NewsViewController" id="8KP-eA-sqz" customClass="NewsViewController" customModule="ViperNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Bx-ZA-D0z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JYW-cc-7Iu" customClass="TableView" customModule="HGPlaceholders">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94509803920000002" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8KP-eA-sqz" id="x3s-5g-fjF"/>
+                                    <outlet property="delegate" destination="8KP-eA-sqz" id="D44-qz-GjY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="JYW-cc-7Iu" secondAttribute="bottom" id="5Lb-1W-jAt"/>
+                            <constraint firstItem="JYW-cc-7Iu" firstAttribute="leading" secondItem="EJw-Ln-DtW" secondAttribute="leading" id="68x-Ex-mFy"/>
+                            <constraint firstItem="EJw-Ln-DtW" firstAttribute="trailing" secondItem="JYW-cc-7Iu" secondAttribute="trailing" id="6SG-n5-zJg"/>
+                            <constraint firstItem="JYW-cc-7Iu" firstAttribute="top" secondItem="EJw-Ln-DtW" secondAttribute="top" id="87T-9b-NTc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EJw-Ln-DtW"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="JYW-cc-7Iu" id="C56-5a-ZSf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24J-Nj-D3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="56.919642857142854"/>
+        </scene>
+    </scenes>
+</document>
